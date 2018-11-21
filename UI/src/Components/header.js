@@ -1,7 +1,12 @@
 import React, { Component } from 'react';
 import { Collapse, Navbar, NavbarToggler, NavbarBrand, Nav, NavItem, NavLink , Button } from 'reactstrap';
+<<<<<<< master
+import { NavLink as Links } from 'react-router-dom';
+
+=======
 import { Modal, ModalHeader, ModalBody, ModalFooter } from 'reactstrap';
 import { FaExpand, FaUikit, FaAtom, FaGem, FaHubspot } from "react-icons/fa";
+>>>>>>> master
 export default class Example extends React.Component {
   constructor(props) {
     super(props);
@@ -31,13 +36,22 @@ export default class Example extends React.Component {
     return (
       <div>
         <Navbar color="dark" light className="text-white">
+<<<<<<< master
+          <NavbarBrand href="/" className="mr-auto text-white">Reactor</NavbarBrand>
+          <Button outline onClick={this.toggleNavbar} className="mr-2" color="primary">Nav</Button>{' '}
+
+=======
           <NavbarBrand href="/" className="mr-auto text-white"><FaHubspot />Reactor</NavbarBrand>
           <Button outline onClick={this.toggleNavbar} className="mr-2" color="primary"><FaExpand /></Button>{' '}
           <Button color="success" onClick={this.toggle}>{this.props.buttonLabel} Login</Button>
+>>>>>>> master
           <Collapse isOpen={!this.state.collapsed} navbar>
             <Nav navbar className="text-white" >
               <NavItem>
-                <NavLink className="text-white" href="/components/">Components</NavLink>
+                <Links className="text-white" to="/components/">Components</Links>
+              </NavItem>
+              <NavItem>
+                <Links className="text-white" to="/views/">Views</Links>
               </NavItem>
               <NavItem>
                 <NavLink className="text-white" href="/components/">Views</NavLink>
