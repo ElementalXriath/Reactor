@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import MainHeader from './Components/header.js';
 import MainView from './Views/main_view';
-
+import { Route } from 'react-router-dom';
 
 class App extends Component {
   render() {
@@ -9,8 +9,7 @@ class App extends Component {
 
       <div className="App">
           <MainHeader/>
-         
-          <MainView/>
+          <Route path='/' exact component={MainView} />
       </div>
 
     );
