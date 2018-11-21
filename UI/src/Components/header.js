@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import { Collapse, Navbar, NavbarToggler, NavbarBrand, Nav, NavItem, NavLink , Button } from 'reactstrap';
+import { NavLink as Links } from 'react-router-dom';
 
 export default class Example extends React.Component {
   constructor(props) {
@@ -22,11 +23,14 @@ export default class Example extends React.Component {
         <Navbar color="dark" light className="text-white">
           <NavbarBrand href="/" className="mr-auto text-white">Reactor</NavbarBrand>
           <Button outline onClick={this.toggleNavbar} className="mr-2" color="primary">Nav</Button>{' '}
-         
+
           <Collapse isOpen={!this.state.collapsed} navbar>
             <Nav navbar className="text-white" >
               <NavItem>
-                <NavLink className="text-white" href="/components/">Components</NavLink>
+                <Links className="text-white" to="/components/">Components</Links>
+              </NavItem>
+              <NavItem>
+                <Links className="text-white" to="/views/">Views</Links>
               </NavItem>
               <NavItem>
                 <NavLink className="text-white" href="https://github.com/reactstrap/reactstrap">GitHub</NavLink>
