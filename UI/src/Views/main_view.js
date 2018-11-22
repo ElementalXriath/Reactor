@@ -3,51 +3,58 @@ import { Container, Row, Col } from 'reactstrap';
 import { Card, Button, CardImg, CardTitle, CardText, CardDeck,
     CardSubtitle, CardBody } from 'reactstrap';
 import Logo from './logo.jpg';
-import View from './view.png';
+import { FaExpand, FaUikit, FaAtom, FaGem  } from "react-icons/fa";
+
 export default class MainView extends React.Component {
   render() {
     return (
 
 
     <Container className="text-center">
-        <Row>
-          <Col>
-          <CardDeck>
-      <Card>
-        <CardImg top width="100%" src={Logo} alt="Card image cap" className="img-thumbnail img-sm" />
-        <CardBody>
-          <CardTitle>Components</CardTitle>
-          <CardSubtitle>Card subtitle</CardSubtitle>
-          <CardText>This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</CardText>
-          <Button>Button</Button>
-        </CardBody>
-      </Card>
-      <Card>
-        <CardImg top width="100%" src={View} alt="Card image cap" />
-        <CardBody>
-          <CardTitle>Views</CardTitle>
-          <CardSubtitle>Card subtitle</CardSubtitle>
-          <CardText>This card has supporting text below as a natural lead-in to additional content.</CardText>
-          <Button>Button</Button>
-        </CardBody>
-      </Card>
-      <Card>
-        <CardImg top width="100%" src="https://placeholdit.imgix.net/~text?txtsize=33&txt=256%C3%97180&w=256&h=180" alt="Card image cap" />
-        <CardBody>
-          <CardTitle>Reactor Widgets</CardTitle>
-          <CardSubtitle>Card subtitle</CardSubtitle>
-          <CardText>This is a wider card with supporting text below as a natural lead-in to additional content. This card has even longer content than the first to show that equal height action.</CardText>
-          <Button>Button</Button>
-        </CardBody>
-      </Card>
-    </CardDeck>
-          </Col>
+        <br />
+        <Row> 
+        <Col xs="12" sm="12" className="text-center">
+            <h1>Reactor</h1>
+           <img src={Logo} className="img-thumbnail" /> 
+             
+        </Col>
         </Row>
-        <Row>
-          <Col>.col</Col>
-          <Col>.col</Col>
-          <Col>.col</Col>
-          <Col>.col</Col>
+        <br />
+        <Row>       
+        <Col xs="6" sm="6">
+        <Card body className="shadow-lg p-3 mb-5 bg-white rounded" >
+        <CardTitle><FaUikit /></CardTitle>
+          <CardTitle>Components</CardTitle>
+          <CardText>Search Reactors Component Lib.</CardText>
+          <Button color="primary">Go</Button>
+        </Card>
+      </Col>
+      <Col xs="6" sm="6">
+        <Card body className="shadow-lg p-3 mb-5 bg-white rounded">      
+        <CardTitle><FaExpand /></CardTitle>
+          <CardTitle>Views</CardTitle>
+          <CardText>Serach Reactors Views Lib.</CardText>
+          <Button>Go</Button>
+        </Card>
+      </Col>
+        </Row>
+        <Row>       
+        <Col xs="6" sm="6">
+        <Card body className="shadow-lg p-3 mb-5 bg-white rounded">
+        <CardTitle><FaAtom /></CardTitle>
+          <CardTitle>Widgets</CardTitle>
+          <CardText>Search Reactors Widget Lib.</CardText>
+          <Button color="primary">Go</Button>
+        </Card>
+      </Col>
+      <Col xs="6" sm="6">
+        <Card body className="shadow-lg p-3 mb-5 bg-white rounded">    
+        <CardTitle><FaGem /></CardTitle>
+          <CardTitle>Exclusive</CardTitle>
+          <CardText>Serach Reactors X Lib.</CardText>
+          <Button>Go</Button>
+        </Card>
+      </Col>
         </Row>
       </Container>
      

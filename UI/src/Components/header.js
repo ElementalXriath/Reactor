@@ -1,6 +1,10 @@
 import React, { Component } from 'react';
 import { Collapse, Navbar, NavbarToggler, NavbarBrand, Nav, NavItem, NavLink , Button } from 'reactstrap';
+
 import { NavLink as Links } from 'react-router-dom';
+
+import { Modal, ModalHeader, ModalBody, ModalFooter } from 'reactstrap';
+import { FaExpand, FaUikit, FaAtom, FaGem, FaHubspot } from "react-icons/fa";
 
 export default class Example extends React.Component {
   constructor(props) {
@@ -8,8 +12,12 @@ export default class Example extends React.Component {
 
     this.toggleNavbar = this.toggleNavbar.bind(this);
     this.state = {
-      collapsed: true
+      collapsed: true,
+      modal: false
     };
+   
+   
+    this.toggle = this.toggle.bind(this);
   }
 
   toggleNavbar() {
@@ -17,12 +25,24 @@ export default class Example extends React.Component {
       collapsed: !this.state.collapsed
     });
   }
+
+  toggle() {
+    this.setState({
+      modal: !this.state.modal
+    });
+  }
   render() {
     return (
       <div>
         <Navbar color="dark" light className="text-white">
+
           <NavbarBrand href="/" className="mr-auto text-white">Reactor</NavbarBrand>
           <Button outline onClick={this.toggleNavbar} className="mr-2" color="primary">Nav</Button>{' '}
+
+
+          <NavbarBrand href="/" className="mr-auto text-white"><FaHubspot />Reactor</NavbarBrand>
+          <Button outline onClick={this.toggleNavbar} className="mr-2" color="primary"><FaExpand /></Button>{' '}
+          <Button color="success" onClick={this.toggle}>{this.props.buttonLabel} Login</Button>
 
           <Collapse isOpen={!this.state.collapsed} navbar>
             <Nav navbar className="text-white" >
@@ -31,6 +51,14 @@ export default class Example extends React.Component {
               </NavItem>
               <NavItem>
                 <Links className="text-white" to="/views/">Views</Links>
+
+              </NavItem>
+              <NavItem>
+                <NavLink className="text-white" href="/components/">Views</NavLink>
+              </NavItem>
+              <NavItem>
+                <NavLink className="text-white" href="/components/">Widgets</NavLink>
+
               </NavItem>
               <NavItem>
                 <NavLink className="text-white" href="https://github.com/reactstrap/reactstrap">GitHub</NavLink>
@@ -38,6 +66,16 @@ export default class Example extends React.Component {
             </Nav>
           </Collapse>
         </Navbar>
+        <Modal isOpen={this.state.modal} toggle={this.toggle} className={this.props.className}>
+              <ModalHeader toggle={this.toggle} charCode="Y">Login</ModalHeader>
+              <ModalBody>
+               
+              </ModalBody>
+              <ModalFooter>
+                <Button color="primary" onClick={this.toggle}>Login</Button>{' '}
+                <Button color="secondary" onClick={this.toggle}>ghy</Button>
+              </ModalFooter>
+            </Modal>
       </div>
     );
   }
