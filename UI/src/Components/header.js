@@ -35,33 +35,29 @@ export default class Example extends React.Component {
     return (
       <div>
         <Navbar color="dark" light className="text-white">
-
-          <NavbarBrand href="/" className="mr-auto text-white">Reactor</NavbarBrand>
-          <Button outline onClick={this.toggleNavbar} className="mr-2" color="primary">Nav</Button>{' '}
-
-
-          <NavbarBrand href="/" className="mr-auto text-white"><FaHubspot />Reactor</NavbarBrand>
+          <NavbarBrand href="/" className="mr-auto text-white"><FaHubspot /> R3actor</NavbarBrand>
+          <Button outline color="primary" className="m-1" onClick={this.toggle}>{this.props.buttonLabel} Log-in </Button><span> </span> {' '}
           <Button outline onClick={this.toggleNavbar} className="mr-2" color="primary"><FaExpand /></Button>{' '}
-          <Button color="success" onClick={this.toggle}>{this.props.buttonLabel} Login</Button>
-
+          
           <Collapse isOpen={!this.state.collapsed} navbar>
             <Nav navbar className="text-white" >
               <NavItem>
-                <Links className="text-white" to="/components/">Components</Links>
+                <NavLink className="text-white" href="/components/"><FaUikit /> Components</NavLink>
               </NavItem>
               <NavItem>
-                <Links className="text-white" to="/views/">Views</Links>
-
+                <NavLink className="text-white" href="/components/"><FaExpand/> Views</NavLink>
               </NavItem>
               <NavItem>
-                <NavLink className="text-white" href="/components/">Views</NavLink>
+                <NavLink className="text-white" href="/components/"><FaAtom/> Widgets</NavLink>
               </NavItem>
               <NavItem>
-                <NavLink className="text-white" href="/components/">Widgets</NavLink>
-
+                <NavLink className="text-white" href="/components/"><FaGem /> Xclusive Script</NavLink>
               </NavItem>
               <NavItem>
-                <NavLink className="text-white" href="https://github.com/reactstrap/reactstrap">GitHub</NavLink>
+                <NavLink className="text-white" href="/components/">? About</NavLink>
+              </NavItem>
+              <NavItem>
+                <NavLink className="text-white" href="https://github.com/ElementalXriath/Reactor">GitHub</NavLink>
               </NavItem>
             </Nav>
           </Collapse>
@@ -73,7 +69,7 @@ export default class Example extends React.Component {
               </ModalBody>
               <ModalFooter>
                 <Button color="primary" onClick={this.toggle}>Login</Button>{' '}
-                <Button color="secondary" onClick={this.toggle}>ghy</Button>
+                <Button color="secondary" onClick={this.toggle}>NVM</Button>
               </ModalFooter>
             </Modal>
       </div>
