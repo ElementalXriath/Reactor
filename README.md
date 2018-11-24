@@ -4,6 +4,7 @@
  R3actor will be a hub dedicated strictly to react. Users may search , browse , sell, trade,  post , use and create React Components ,
  Views , Widgets and Premium Scripts. This is for React Only ... only real developers allowed :) Comming Soon , Reactor Npm Install so you may import components or views from a package.
  
+
  Reactor is broken down into 8 seperate portals . 
  
  - Views
@@ -18,7 +19,7 @@
  
  You may add a listed script to your R3Deck , ( a user profile feature where you may store access to your favorite scripts).
  
- !!! The R3Deck will be equipped with a powerful UI allowing easy tranfer of code from the deck to editor.
+ !!! The R3Deck will be equipped with a powerful UI allowing easy tranfer of code from the deck to editor. The R3 deck allows user to orginzed there componets views and widgets creating a personal template used to desing with react.
  
  You may also create  ,Views , Widgets and new Compoents and Add them to R3actors Libary. So others may view and add to there deck . 
  
