@@ -4,12 +4,15 @@
  R3actor will be a hub dedicated strictly to react. Users may search , browse , sell, trade,  post , use and create React Components ,
  Views , Widgets and Premium Scripts. This is for React Only ... only real developers allowed :) Comming Soon , Reactor Npm Install so you may import components or views from a package.
  
- Reactor is broken down into 4 seperate portals . 
+ Reactor is broken down into 8 seperate portals . 
  
  - Views
  - Components
  - Widgets
  - Exclusive Scripts
+ - NPM Hub ( Users may post Npms for others to use , I will personaly add the most main stream ones as well , so this will act as a directory to anything related to React Development)
+ - Cool Stuff 
+ - Hall Of Fame
  
  Each portal contains an orginized list of components created by other users and developers alike.
  
