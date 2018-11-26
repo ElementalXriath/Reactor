@@ -1,5 +1,5 @@
 import { combineReducers } from 'redux';
-import { exampleReducer } from './exampleReducer';
+import { componentsReducer } from './componentsReducer';
 
 
 // redux only works with one reducer, use combine reducer as work around for multiple reducers
@@ -7,5 +7,5 @@ import { exampleReducer } from './exampleReducer';
 
 // all reducers will be imported and used here
 export default combineReducers({
-    exampleReducer
+    componentsReducer
   });
