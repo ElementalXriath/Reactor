@@ -16,17 +16,16 @@ import ListItem from '@material-ui/core/ListItem';
 import ListItemText from '@material-ui/core/ListItemText';
 import Avatar from '@material-ui/core/Avatar';
 
+// import connect from react-redux to connect to the redux store
+import { connect } from 'react-redux';
+
+// import actions from ComponentsAction that way we can use them in the HTML/JSX
+// We can show different components based on fetching or fetched
+import { FETCHING_COMPONENTS, FETCHED_COMPONENTS, ERROR } from '../../Actions/ComponentsAction';
 
 
-
-
-
-
-
-
-
-
-export default class ComponentsView extends React.Component {
+// Had to change your export default here to add the connect function at the end
+class ComponentsView extends React.Component {
   render() {
     return (
 
@@ -109,3 +108,16 @@ export default class ComponentsView extends React.Component {
         );
     }
 }
+// This will be the first argument in connect, see below
+// You can name this whatever you want but for simplicity it is named for what it does
+const mapStateToProps = state => {
+  // return an object of the variables needed from redux for this component
+  return {
+    fetchingComponents: state.componentsReducer.fetchingComponents,
+    fetchedComponents: state.componentsReducer.fetchedComponents,
+    components: state.componentsReducer.components
+  }
+}
+// export connect, it will be split like below
+// The first part will have mapStateToProps and either mapDispatchToProps or an object with all actions/methods needed
+export default connect(mapStateToProps, { FETCHING_COMPONENTS, FETCHED_COMPONENTS, ERROR })(ComponentsView);
