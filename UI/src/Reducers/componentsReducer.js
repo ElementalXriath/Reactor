@@ -1,8 +1,9 @@
 import { FETCHING_COMPONENTS, FETCHED_COMPONENTS } from "../Actions/ComponentsAction";
 
 const initialState = {
- fetchingComponents: false;
- fetchedComponents: false;
+ fetchingComponents: false,
+ fetchedComponents: false,
+ components: []
 }
 
 const componentsReducer = (state = initiaState, action) => {
@@ -15,7 +16,8 @@ const componentsReducer = (state = initiaState, action) => {
     case FETCHED_COMPONENTS:
       return {
         fetchingComponents: false,
-        fetchedComponents: true
+        fetchedComponents: true,
+        components: action.payload
       }
   }
 }
