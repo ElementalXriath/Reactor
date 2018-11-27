@@ -4,7 +4,7 @@ import { Modal, ModalHeader, ModalBody, ModalFooter } from 'reactstrap';
 import { FaExpand, FaUikit, FaAtom, FaGem, FaHubspot, FaGithubAlt, FaGithub, FaGitter, FaGg } from "react-icons/fa";
 import './header.css';
 
-
+import { Link, NavLink as NavLINK } from 'react-router-dom';
 
 
 export default class Example extends React.Component {
@@ -16,8 +16,8 @@ export default class Example extends React.Component {
       collapsed: true,
       modal: false
     };
-   
-   
+
+
     this.toggle = this.toggle.bind(this);
   }
 
@@ -38,15 +38,19 @@ export default class Example extends React.Component {
     return (
       <div>
         <Navbar color="dark" light className="text-white shadow border border-bottom border-info">
-          <NavbarBrand href="/" className="mr-auto text-white"><FaHubspot /> R3</NavbarBrand>
+          <Link to="/" className="mr-auto text-white" style={{"text-decoration": 'none'}}><FaHubspot /> R3</Link>
           <Button   className="m-1 grad btn-sm" onClick={this.toggle}>{this.props.buttonLabel}<FaGitter /> Log-in </Button><span> </span> {' '}
           <Button   className="mr-2 grad btn-sm" color="info"><FaGg /></Button>{' '}
           <Button  onClick={this.toggleNavbar} className="mr-2 grad btn-sm" color="info"><FaExpand /></Button>{' '}
-  
+
           <Collapse isOpen={!this.state.collapsed} navbar>
             <Nav navbar className="text-white" >
               <NavItem>
-                <NavLink className="text-white" href="/components/"><FaUikit /> Components</NavLink>
+                <NavLINK to='/Components'>
+                  <NavLink className="text-white">
+                    <FaUikit /> Components
+                  </NavLink>
+                </NavLINK>
               </NavItem>
               <NavItem>
                 <NavLink className="text-white" href="/components/"><FaExpand/> Views</NavLink>
@@ -69,7 +73,7 @@ export default class Example extends React.Component {
         <Modal isOpen={this.state.modal} toggle={this.toggle} className={this.props.className}>
               <ModalHeader toggle={this.toggle} charCode="Y">Login</ModalHeader>
               <ModalBody>
-               
+
               </ModalBody>
               <ModalFooter>
                 <Button color="info" onClick={this.toggle}>Login</Button>{' '}
