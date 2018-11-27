@@ -22,13 +22,21 @@ const styles = theme => ({
     textAlign: 'center',
     color: theme.palette.text.secondary,
     backgroundColor: 'whitesmoke',
-    
-    
+    border: '.5px solid  rgb(0, 21, 46)',
+    boxShadow: '0 0 0 0.2rem rgb(1, 58, 133)',
+  },
+  papertool: {
+    padding: theme.spacing.unit * 2,
+    textAlign: 'center',
+    color: theme.palette.text.secondary,
+    backgroundColor: ' rgb(0, 21, 46)',
+    border: '2px solid  rgb(0, 21, 46)',
+    boxShadow: '0 0 0 0.2rem rgb(0, 21, 46)',
   },
   textField: {
     marginLeft: theme.spacing.unit,
     marginRight: theme.spacing.unit,
-    fontSize: 6,
+    fontSize: 4,
     backgroundColor:'white',
   
    
@@ -65,8 +73,8 @@ const styles = theme => ({
   bootstrapInput: {
     borderRadius: 4,
     backgroundColor: theme.palette.common.navy,
-    border: '1px solid #ced4da',
-    fontSize: 6,
+    border: '1px solid  rgb(0, 21, 46)',
+    fontSize: 4,
     padding: '8px 10px',
     transition: theme.transitions.create(['border-color', 'box-shadow']),
     // Use the system font instead of the default Roboto font.
@@ -195,8 +203,8 @@ class OutlinedTextFields extends React.Component {
         </Grid>
 
         <Grid item xs={6} lg={3}>
-          <Paper className={classes.paper}>
-       <Button variant="contained" color="primary" className={classes.button}>
+          <Paper className={classes.papertool}>
+       <Button variant="contained" color="info" className={classes.button}>
        Save
       </Button>
           </Paper>
@@ -291,6 +299,102 @@ class OutlinedTextFields extends React.Component {
           </Paper>
         </Grid>
 
+
+        <Grid item xs={12}>
+          <Paper className={classes.paper}>
+
+             <h1> NPMS REQUIRED </h1>
+
+          <TextField
+          id="outlined-select-currency"
+          select
+          label="Select"
+          className={classes.textField}
+          value={this.state.currency}
+          onChange={this.handleChange('currency')}
+          SelectProps={{
+            MenuProps: {
+              className: classes.menu,
+            },
+          }}
+          helperText="Please select your currency"
+          margin="normal"
+          variant="outlined"
+        >
+          {currencies.map(option => (
+            <MenuItem key={option.value} value={option.value}>
+              {option.label}
+            </MenuItem>
+          ))}
+        </TextField>
+          <TextField
+          id="outlined-select-currency"
+          select
+          label="Select"
+          className={classes.textField}
+          value={this.state.currency}
+          onChange={this.handleChange('currency')}
+          SelectProps={{
+            MenuProps: {
+              className: classes.menu,
+            },
+          }}
+          helperText="Please select your currency"
+          margin="normal"
+          variant="outlined"
+        >
+          {currencies.map(option => (
+            <MenuItem key={option.value} value={option.value}>
+              {option.label}
+            </MenuItem>
+          ))}
+         </TextField>
+          <TextField
+          id="outlined-select-currency"
+          select
+          label="Select"
+          className={classes.textField}
+          value ={this.state.currency}
+          onChange={this.handleChange('currency')}
+          SelectProps={{
+            MenuProps: {
+              className: classes.menu,
+            },
+          }}
+          helperText="Please select your currency"
+          margin="normal"
+          variant="outlined"
+        >
+          {currencies.map(option => (
+            <MenuItem key={option.value} value={option.value}>
+              {option.label}
+            </MenuItem>
+          ))}
+        </TextField>
+          <TextField
+          id="outlined-select-currency"
+          select
+          label="Select"
+          className={classes.textField}
+          value={this.state.currency}
+          onChange={this.handleChange('currency')}
+          SelectProps={{
+            MenuProps: {
+              className: classes.menu,
+            },
+          }}
+          helperText="Please select your currency"
+          margin="normal"
+          variant="outlined"
+        >
+          {currencies.map(option => (
+            <MenuItem key={option.value} value={option.value}>
+              {option.label}
+            </MenuItem>
+          ))}
+        </TextField>
+          </Paper>
+        </Grid>
 
        <Grid item xs={12}>
           <Paper className={classes.paper}>Example Component Goes Here</Paper>
