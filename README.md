@@ -2,7 +2,7 @@ Reactor
 
 Reactor will be a script hub dedicated STRICTLY TO REACT JS.
 
-Users may search , browse , sell, trade, post , use and create React Components, Views, Widgets, along with browse a libraries of the most trending Npms.
+Users may search , browse , sell, trade, post , use and create React Components, Views, Widgets, along with browse libraries of the most trending Npms.
 
 NPM COMING SOON
 
