@@ -1,5 +1,8 @@
 import React, { Component } from 'react';
-import MainHeader from './Components/header.js';
+// you can also import directly from a folder and it looks for index.js first
+import MainHeader from './Components/Header';
+// you do not need .js on the end, it will only look for a js file
+// import MainHeader from './Components/header.js';
 import MainView from './Views/main_view';
 import ViewsView from './Views/ViewsView';
 import ComponentsView from './Views/ComponentsView';
