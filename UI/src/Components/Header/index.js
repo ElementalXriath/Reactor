@@ -5,9 +5,10 @@ import { FaExpand, FaUikit, FaAtom, FaGem, FaHubspot, FaGithubAlt, FaGithub, FaG
 import './header.css';
 
 import { Link, NavLink as NavLINK } from 'react-router-dom';
+import { connect } from 'react-redux';
+import {FETCHING_USER, FETCHED_USER, USER_ERROR, validateUser } from '../../Actions/loginAction';
 
-
-export default class Example extends React.Component {
+class Example extends React.Component {
   constructor(props) {
     super(props);
 
@@ -40,7 +41,7 @@ export default class Example extends React.Component {
   }
 
   getLogin = () => {
-    console.log({
+    this.props.validateUser({
       user: this.state.user,
       pass: this.state.pass
     })
@@ -91,7 +92,7 @@ export default class Example extends React.Component {
                 <Input type='text' onChange={this.onChangeHandler} placeholder='Username' value={this.state.username}
                 name='user'/>
                 <br />
-              <Input type='text' onChange={this.onChangeHandler} placeholder='Password' value={this.state.password}
+              <Input type='password' onChange={this.onChangeHandler} placeholder='Password' value={this.state.password}
               name='pass'/>
               </ModalBody>
               <ModalFooter>
@@ -103,3 +104,12 @@ export default class Example extends React.Component {
     );
   }
 }
+
+const mapStateToProps = state => {
+  return {
+    fetchingUser: state.loginReducer.fetchingUser,
+    fetchedUser: state.loginReducer.fetchedUser
+  }
+}
+
+export default connect(mapStateToProps, {validateUser})(Example)

@@ -18,7 +18,6 @@ export const getComponents = () => {
     // Then server will return a response and we use this to dispatch an action
     // We supply a payload that contains the data for all components
          .then(res => {
-           console.log(res)
             dispatch({
               type: FETCHED_COMPONENTS,
               payload: res.data
