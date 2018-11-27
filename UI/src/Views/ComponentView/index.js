@@ -1,3 +1,5 @@
+//THIS WILL PROBALLT BE CHANGED TO THE BOOTSTRAP GALLERY PAGE I SHOWED YOU THAT RESEMBLES CODE PENS CATAGOREY
+
 import React from 'react';
 import { Container, Table } from 'reactstrap';
 import { FaUikit, FaGg , FaStar, FaCode, FaNodeJs, FaTeamspeak, FaNpm  } from "react-icons/fa";
