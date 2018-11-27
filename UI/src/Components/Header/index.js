@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { Collapse, Navbar, NavbarToggler, NavbarBrand, Nav, NavItem, NavLink , Button } from 'reactstrap';
-import { Modal, ModalHeader, ModalBody, ModalFooter } from 'reactstrap';
+import { Modal, ModalHeader, ModalBody, ModalFooter, Input } from 'reactstrap';
 import { FaExpand, FaUikit, FaAtom, FaGem, FaHubspot, FaGithubAlt, FaGithub, FaGitter, FaGg } from "react-icons/fa";
 import './header.css';
 
@@ -14,7 +14,9 @@ export default class Example extends React.Component {
     this.toggleNavbar = this.toggleNavbar.bind(this);
     this.state = {
       collapsed: true,
-      modal: false
+      modal: false,
+      user: '',
+      pass: ''
     };
 
 
@@ -32,6 +34,19 @@ export default class Example extends React.Component {
       modal: !this.state.modal
     });
   }
+// using this syntax you wont have to bind to this in the constructor
+  onChangeHandler = (e) => {
+    this.setState({[e.target.name]: e.target.value})
+  }
+
+  getLogin = () => {
+    console.log({
+      user: this.state.user,
+      pass: this.state.pass
+    })
+  }
+
+
   render() {
 
 
@@ -73,10 +88,14 @@ export default class Example extends React.Component {
         <Modal isOpen={this.state.modal} toggle={this.toggle} className={this.props.className}>
               <ModalHeader toggle={this.toggle} charCode="Y">Login</ModalHeader>
               <ModalBody>
-
+                <Input type='text' onChange={this.onChangeHandler} placeholder='Username' value={this.state.username}
+                name='user'/>
+                <br />
+              <Input type='text' onChange={this.onChangeHandler} placeholder='Password' value={this.state.password}
+              name='pass'/>
               </ModalBody>
               <ModalFooter>
-                <Button color="info" onClick={this.toggle}>Login</Button>{' '}
+                <Button color="info" onClick={this.getLogin}>Login</Button>{' '}
                 <Button color="secondary" onClick={this.toggle}>NVM</Button>
               </ModalFooter>
             </Modal>
