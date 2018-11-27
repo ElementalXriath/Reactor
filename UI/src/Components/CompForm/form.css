@@ -1,0 +1,13 @@
+html, body, #root {
+    height: 100%;
+  }
+  body {
+    width: 100%;
+    height: 900px;
+    color:navy;
+    background-color: aqua;
+    text-align: center;
+    text-shadow: 0 0.05rem 0.1rem black;
+    box-shadow: inset 0 0 5rem black;}
+
+    
