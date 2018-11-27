@@ -1,4 +1,4 @@
-// Use axios for our HTTP requests to server (Promise Based) 
+// Use axios for our HTTP requests to server (Promise Based)
 import axios from "axios";
 
 // write each action this way to avoid double naming
@@ -12,16 +12,16 @@ const getComponents = () => {
     // This will let users know that the page is fetching components data
     // Use a ternary in HTML/JSX code that shows a template view before components
     dispatch({type: FETCHING_COMPONENTS});
-    
+
     // Making a get call to the server to obtain components data
     axios.get('/components')
     // Then server will return a response and we use this to dispatch an action
     // We supply a payload that contains the data for all components
          .then(res => {
             dispatch({
-              type: FECTHED_COMPONENTS,
+              type: FETCHED_COMPONENTS,
               payload: res.data
-              )}
+            })
          })
     // Add a catch just in case the server cannot connect
     // Supply details to a user when this occurs with the payload data

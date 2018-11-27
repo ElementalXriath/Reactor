@@ -7,20 +7,19 @@ import { BrowserRouter as Router } from 'react-router-dom';
 // need createStore in index because it is highest point of the app
 // need applyMiddleware for redux-thunk and logger for developement
 import { createStore, applyMiddleware } from "redux";
-// Provider will wrap our entire app and provide the store to components 
+// Provider will wrap our entire app and provide the store to components
 import { Provider } from "react-redux";
-
-// import thunk to use in middleware
-import { thunk } from "redux-thunk";
 import allReducers from "./Reducers";
+// import thunk to use in middleware
+import ReduxThunk from "redux-thunk";
 
-const middleware = applyMiddleware(
+const middleware = applyMiddleware(ReduxThunk);
 
 
-const store = {
+const store = createStore(
   allReducers,
-  applyMiddleware(thunk)
-}
+  middleware
+)
 
 ReactDOM.render(<Provider store={store}>
                 <Router>

@@ -1,5 +1,5 @@
 import { combineReducers } from 'redux';
-import { componentsReducer } from './componentsReducer';
+import componentsReducer from './componentsReducer';
 
 
 // redux only works with one reducer, use combine reducer as work around for multiple reducers

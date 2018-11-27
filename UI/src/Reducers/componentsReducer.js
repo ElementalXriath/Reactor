@@ -6,19 +6,21 @@ const initialState = {
  components: []
 }
 
-const componentsReducer = (state = initiaState, action) => {
+const componentsReducer = (state = initialState, action) => {
   switch (action.type) {
-  
-    case FETCHING_COMPONENTS: 
-      return {
+
+    case FETCHING_COMPONENTS:
+      return Object.assign({}, state, {
         fetchingComponents: true
-      }
+      })
     case FETCHED_COMPONENTS:
-      return {
+      return Object.assign({}, state, {
         fetchingComponents: false,
         fetchedComponents: true,
         components: action.payload
-      }
+      })
+    default:
+      return state;
   }
 }
 
