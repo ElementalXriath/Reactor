@@ -12,8 +12,9 @@ import { Provider } from "react-redux";
 import allReducers from "./Reducers";
 // import thunk to use in middleware
 import ReduxThunk from "redux-thunk";
+import logger from 'redux-logger';
 
-const middleware = applyMiddleware(ReduxThunk);
+const middleware = applyMiddleware(logger, ReduxThunk);
 
 
 const store = createStore(
