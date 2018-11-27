@@ -12,21 +12,29 @@ let users = [
     id: 1,
     name: 'James',
     email: 'James@email.com',
+    user: "James0292",
+    pass: 'pass'
   },
   {
     id: 2,
     name: 'Aarron',
     email: 'Arron@email.com',
+    user: "Arron2",
+    pass: 'pass'
   },
   {
     id: 3,
     name: 'Ryan',
     email: 'Ryan@email.com',
+    user: "ryan333",
+    pass: 'pass'
   },
   {
     id: 4,
     name: 'Greg',
     email: 'Greg@email.com',
+    user: "greg1",
+    pass: 'pass'
   }
 ]
 
@@ -78,8 +86,8 @@ server.get('/users', (req, res) => {
   }, 1000);
 });
 
-server.get('/users/:id', (req, res) => {
-  const user = users.find(user => user.id == req.params.id);
+server.get('/users/:user', (req, res) => {
+  const user = users.find(user => user.user == req.params.user);
 
   if (user) {
     res.status(200).json(user);
