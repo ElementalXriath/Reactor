@@ -1,10 +1,10 @@
 import React, { Component } from 'react';
-import { Collapse, Navbar, NavbarToggler, NavbarBrand, Nav, NavItem, NavLink , Button } from 'reactstrap';
+import { Collapse, Navbar, NavbarToggler, NavbarBrand, Nav, NavItem, NavLink  } from 'reactstrap';
 import { Modal, ModalHeader, ModalBody, ModalFooter } from 'reactstrap';
 import { FaExpand, FaUikit, FaAtom, FaGem, FaHubspot, FaGithubAlt, FaGithub, FaGitter, FaGg } from "react-icons/fa";
 import './header.css';
-
-
+import { Route, Link, Router } from 'react-router-dom';
+import { Dropdown, ButtonGroup, Button, BSpan } from 'bootstrap-4-react';
 
 
 export default class Example extends React.Component {
@@ -38,15 +38,15 @@ export default class Example extends React.Component {
     return (
       <div>
         <Navbar color="dark" light className="text-white shadow border border-bottom border-info">
-          <NavbarBrand href="/" className="mr-auto text-white"><FaHubspot /> R3</NavbarBrand>
-          <Button   className="m-1 grad btn-sm" onClick={this.toggle}>{this.props.buttonLabel}<FaGitter /> Log-in </Button><span> </span> {' '}
-          <Button   className="mr-2 grad btn-sm" color="info"><FaGg /></Button>{' '}
-          <Button  onClick={this.toggleNavbar} className="mr-2 grad btn-sm" color="info"><FaExpand /></Button>{' '}
+          <NavbarBrand href="/" className="mr-auto text-white"><FaHubspot /> </NavbarBrand>
+          <Button   className="m-1 grad " onClick={this.toggle}>{this.props.buttonLabel}<FaGitter /> Log-in </Button><span> </span> {' '}
+          <Button   className="mr-2 grad " color="info"><FaGg /></Button>{' '}
+          <Button  onClick={this.toggleNavbar} className="mr-2 grad btn" color="info"><FaExpand /></Button>{' '}
   
           <Collapse isOpen={!this.state.collapsed} navbar>
             <Nav navbar className="text-white" >
               <NavItem>
-                <NavLink className="text-white" href="/components/"><FaUikit /> Components</NavLink>
+                <NavLink className="text-white" href="/components" exact ><FaUikit /> Components</NavLink>
               </NavItem>
               <NavItem>
                 <NavLink className="text-white" href="/components/"><FaExpand/> Views</NavLink>
