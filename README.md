@@ -4,7 +4,7 @@ Reactor will be a script hub dedicated STRICTLY TO REACT JS.
 
 Users may search , browse , sell, trade, post , use and create React Components, Views, Widgets, along with browse libraries of the most trending Npms.
 
-NPM COMING SOON
+PERSONAL NPM COMING SOON FOR YOUR OWN COMPONENT LIBARY
 
 This is for React Only, Coming Soon , Reactor X Npm Install so you may import all of its components or views from a Json package.
 
