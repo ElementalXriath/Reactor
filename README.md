@@ -2,13 +2,26 @@
 <img src="./logo.jpg"/>
 
 <br />
-Reactor will be a script hub dedicated STRICTLY TO REACT JS Simliar to Code Pen but 100% React , Along with a NPM list for any type of Development . And you have a UI built to store and deploy all the componenets you want to add to a deck. As this app evolves this readme will become more dynamic. This is a rough over view , and as we all know the best ideas dont come until later on.
+Reactor will be a script hub, social point, recruiting site, and Developer Tool dedicated <b>STRICTLY TO REACT JS.<b> 
+  
+ Simliar to Code Pens concept, but for 100% React . And you have a UI built to store and deploy all the componenets you want to add to a profile deck that will be used for your perosnal React Liabery accessed via NMP global , or a new concept we have came up with... a PERSONAL NMP AND KEY. As this app evolves this readme will become more dynamic. This is a rough over view , and as we all know the best ideas dont come until later on.
 
-Users may search , browse , sell, trade, post , use and create React Components, Views, Widgets, along with browse libraries of the most trending Npms.
+Users may :
+Search,
+Browse, 
+Sell,
+Trade,
+Post,
+Use,
+Create,
+Discuss,
+Collaberate,
+Challange,
 
-PERSONAL NPM COMING SOON FOR YOUR OWN COMPONENT LIBARY
+All React Related Views, Widgets, Routers , Templates, along with browse libraries of the most trending Npms and components React has to offer.
 
-This is for React Only, Coming Soon , Reactor X Npm Install so you may import all of its components or views from a Json package.
+PERSONAL NPM COMING SOON FOR YOUR OWN COMPONENT LIBARY = Reactor Gem
+
 
 Reactor is broken down into 4 separate portals .
 
