@@ -3,7 +3,7 @@ import React, { Component } from 'react';
 import MainHeader from './Components/Header/index';
 // you do not need .js on the end, it will only look for a js file
 // import MainHeader from './Components/header.js';
-import MainView from './Views/mainlanding';
+import MainView from './Views/Home/index';
 import ViewsView from './Views/ViewsView/index';
 import ComponentsView from './Views/ComponentsView/index';
 import { Route } from 'react-router-dom';
