@@ -4,7 +4,9 @@
 <br />
 Reactor will be a script hub, social point, recruiting site, and Developer Tool dedicated <b>STRICTLY TO REACT JS.</b> 
   
- Simliar to Code Pens concept, but for 100% React . And you have a UI built to store and deploy all the componenets you want to add to a profile deck that will be used for your perosnal React Liabery accessed via NMP global , or a new concept we have came up with... a PERSONAL NMP AND KEY. As this app evolves this readme will become more dynamic. This is a rough over view , and as we all know the best ideas dont come until later on.
+ This is a 100% React social platform, desinged to accerlate Reacts potenial in the tech world as well as provide developers a new type of NPM AND UI tool to make coding in React obsolete in speed, complexity and understanding. 2 minds are better then 1 and 2 million better then 1 million. This is a product in earley stages of evolution , but I have little doubt It find its place in the halls of legends :) I am already using the UI on my  version control to program with personally. It is faster, cleaner , smarter , and this personal experience i have with its prototype has made me certain it will change the game for react.
+ 
+ a UI built to store and deploy all the components there is to offer from a network of developers/ Simpyl click add to deck on any components that is on the networkr a new concept we have came up with... a PERSONAL NMP AND KEY. As this app evolves this readme will become more dynamic. This is a rough over view , and as we all know the best ideas dont come until later on.
 
 Users may :
 Search,
@@ -20,7 +22,7 @@ Challange,
 
 All React Related Views, Widgets, Routers , Templates, along with browse libraries of the most trending Npms and components React has to offer.
 
-PERSONAL NPM COMING SOON FOR YOUR OWN COMPONENT LIBARY = Reactor Gem
+PERSONAL NPM COMING SOON FOR YOUR OWN COMPONENT LIBARY = Reactor Gem for your own deck of components. may not be clear to you yet , but ill be sure its very clear very soon.
 
 
 Reactor is broken down into 4 separate portals .
@@ -52,3 +54,9 @@ A new react js isolated community
 Reactor is meant to isolate React Js and draw its developers into shared media source. This will in return give this new langue a cutting edge acceleration of tech advancement.
 
 Simple... Now lets fuel React with infinte, resuable , cutting edge source codes. This allows developers to automatically have access to the most advance scripts in react , allowing them to build on the top of the max potential complexity available as a community. Along with offering a New type of UI for react developers to build a reusable code deck and perfect there own template to reach elevated states of tech engineering.
+
+<h1>A Reactor Create App Npm
+</h1>
+This npm will come pre routed and pre wired to a redux store. Simply run npm install reacor app , the home page will be a form to submit to open the redux store and choose you landing template. The app js is already wired with react dom and links. The file sturcre already has a set up to build from seed out keeping the data one way and immutable. :) The file structre can only be damaged by bad practices. The index fills in the views already have comments on how to build vews/ compoents and there is a list of import options.
+
+Please excuse my spelling atm im doing this at a very very rapid pace, and this read me is more for my personal notes then anything else.
