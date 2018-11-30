@@ -1,124 +1,215 @@
 import React, { Component } from 'react';
+//BOOSTRAP UI
 import {
-  Collapse,
+  Alert,
   Container,
   Row,
   Col,
   List,
   Navbar,
   Jumbotron,
-  Lead,
+  BSpan,
   Button,
   ButtonGroup,
   Card,
   BH1,
-  BH4,
-  BP,
-  BA,
+  BH3,
+  Pagination,
+  Nav,
   BDiv,
   BSmall,
-  BFooter
+  Form,
 } from 'bootstrap-4-react';
+
+import AvatarUser from './avatar';
+//Avatar On Component Cards
+import ComponentMenu from './sidemenu';
+//Side Mene
+import ListFilter from './listfilter';
+import { FaCode, FaUikit, FaAtom, FaGem, FaNpm, FaMagento, FaCloudUploadAlt, FaThList, FaEye, FaGithub, FaGg, FaChevronCircleRight, FaChevronCircleLeft, FaUserPlus } from "react-icons/fa";
+import './landing.css';
+
 
 const thumbnailSrc = "data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%22508%22%20height%3D%22225%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%20508%20225%22%20preserveAspectRatio%3D%22none%22%3E%3Cdefs%3E%3Cstyle%20type%3D%22text%2Fcss%22%3E%23holder_16544932167%20text%20%7B%20fill%3A%23eceeef%3Bfont-weight%3Abold%3Bfont-family%3AArial%2C%20Helvetica%2C%20Open%20Sans%2C%20sans-serif%2C%20monospace%3Bfont-size%3A25pt%20%7D%20%3C%2Fstyle%3E%3C%2Fdefs%3E%3Cg%20id%3D%22holder_16544932167%22%3E%3Crect%20width%3D%22508%22%20height%3D%22225%22%20fill%3D%22%2355595c%22%3E%3C%2Frect%3E%3Cg%3E%3Ctext%20x%3D%22169.7578125%22%20y%3D%22123.9%22%3EThumbnail%3C%2Ftext%3E%3C%2Fg%3E%3C%2Fg%3E%3C%2Fsvg%3E";
 
-const AlbumCard = (props) => {   //////THIS COMPONENT IS HOW THE COMPONENTS WILL BE DISPLAYED
+
+
+const AlbumCard = (props) => {
+  const style = {
+ 
+    marginBottom:'0', 
+    heading: {
+      fontWeight: '800',
+  
+
+    }
+    
+  }
   return (
+    
     <Col md="4">
-      <Card mb="4" shadow="sm">
-        <Card.Image top src={thumbnailSrc} />
-        <Card.Body>
-          <Card.Text>This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</Card.Text>
+      <Card mb="4" shadow="sm" >
+      <Card.Header className="component-card" bg="dark" text="white" > Component Title </Card.Header>
+        <Card.Image top src={thumbnailSrc} border="info" />
+        <Card.Body bg="dark"  >
           <BDiv display="flex" justifyContent="between" alignItems="center">
             <ButtonGroup>
-              <Button secondary outline sm>View</Button>
-              <Button secondary outline sm>Edit</Button>
+              <Button secondary  lg className="grad" ><FaGithub/></Button>
+              <Button secondary lg className="grad"><FaGg/></Button>
+              <Button secondary  lg className="grad"><FaCode/></Button>
+              <Button secondary  lg className="grad"><FaThList/></Button>
+              
             </ButtonGroup>
-            <BSmall text="muted">9 mins</BSmall>
+            <BSmall text="muted"><AvatarUser/></BSmall>
           </BDiv>
         </Card.Body>
+        <Card.Footer justifyContent="center"> <List inline>
+        <List.Item inline><FaEye color="blue"/> 1241</List.Item>
+        <List.Item inline><FaGem color="gold"/> 234</List.Item>
+        <List.Item inline><FaCloudUploadAlt color="green"/> 12957</List.Item>
+    
+      </List></Card.Footer>
+
       </Card>
     </Col>
   )
 }
+//These Are The Cards to Display the Components . They will be arrayed or looped.
 
-const AlbumHeader = (props) => {
+const MenuBtn = (props) => {
   return (
-    <header>
-      <Collapse bg="dark" id="navbarHeader">
-        <Container>
-          <Row>
-            <Col col="sm-8 md-4" py="4">
-              <BH4 text="white">About</BH4>
-              <BP text="muted">Add some information about the album below, the author, or any other background context. Make it a few sentences long so folks can pick up some informative tidbits. Then, link them off to some social networking sites or contact information.</BP>
-            </Col>
-            <Col sm="4" offset="md-1" py="4">
-              <BH4 text="white">Contact</BH4>
-              <List unstyled>
-                <List.Item><BA href="#" text="white">Follow on Twitter</BA></List.Item>
-                <List.Item><BA href="#" text="white">Like on Facebook</BA></List.Item>
-                <List.Item><BA href="#" text="white">Email me</BA></List.Item>
-              </List>
-            </Col>
-          </Row>
-        </Container>
-      </Collapse>
-      <Navbar dark bg="dark" shadow="sm">
-        <Container display="flex" justifyContent="between">
-          <Navbar.Brand href="#" display="flex" alignItems="center">
-            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="mr-2"><path d="M23 19a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h4l2-3h6l2 3h4a2 2 0 0 1 2 2z"></path><circle cx="12" cy="13" r="4"></circle></svg>
-            <strong>Album</strong>
+    <div className="fixed-bottom" >
+      <Navbar dark bg="none" shadow="sm">
+          <Navbar.Brand href="#" display="flex" alignItems="left">
+            <ComponentMenu/>
           </Navbar.Brand>
-          <Navbar.Toggler target="#navbarHeader" aria-controls="navbarHeader" aria-label="Toggle navigation" />
-        </Container>
+           
       </Navbar>
-    </header>
+    </div>
   )
 }
+//This is the Translucent Nav at the Bottom Fixed. The Buttons Will open a Menu to switch component Types.
 
-const AlbumFooter = (props) => {
-  return (
-    <BFooter text="muted">
-      <Container>
-        <BP float="right"><a href="#">Back to top</a></BP>
-        <p>Album example is &copy; Bootstrap, but please download and customize it for yourself!</p>
-        <p>New to Bootstrap? <a href="../../">Visit the homepage</a> or read our <a href="../../getting-started/">getting started guide</a>.</p>
-      </Container>
-    </BFooter>
-  )
-}
 
-const AlbumJumbotron = (props) => {
+const HeaderComp = (props) => {
   const style = {
-    backgroundColor: '#fff',
+ 
+    marginBottom:'0', 
     heading: {
-      fontWeight: '300'
+      fontWeight: '800',
+      textShadow: '0 0 3px gray, 0 0 5px aqua',
+      color: 'black',
+
     }
+    
+  }
+  const ColoredLine = ({ color }) => (
+    <hr
+        style={{
+          boxShadow: "0 0 3px gray, 0 0 5px aqua",
+            backgroundImage: 'linear-gradient(to bottom right, aqua, rgb(1, 58, 133)',
+            height: 6
+        }}
+    />
+);
+  return (
+        <Jumbotron text="left" bg="dark" style={style} className="body">
+          <Container > 
+            <BH1 style={style.heading}><FaUikit color="white"/> Explore Components</BH1>
+            <ColoredLine  className="rounded"/>
+            
+            <BDiv float="right">  <Button  shadow className="grad" lg float="right"><FaUikit/>Create Component</Button></BDiv>
+          </Container>  
+        </Jumbotron>
+      )
+    }
+//This is the Jumbotron page header.
+
+
+
+
+const CompNav = (props) => {
+  const style = {
+ 
+    marginBottom:'0', 
+    heading: {
+      fontWeight: '800',
+      textShadow: "0 0 3px gray, 0 0 5px dodgerblue",
+      color: 'black',
+
+    }
+
   }
 
-  return (
-    <Jumbotron text="center" style={style}>
-      <Container>
-        <BH1 style={style.heading}>Album example</BH1>
-        <Lead text="muted">Something short and leading about the collection below—its contents, the creator, etc. Make it short and sweet, but not too short so folks don&#39;t simply skip over it entirely.</Lead>
-      </Container>
-      <p>
-        <Button primary mx="1" my="2">Main call to action</Button>
-        <Button secondary mx="1" my="2">Secondary action</Button>
-      </p>
-    </Jumbotron>
-  )
-}
+      return (
+      
+        <Nav justifyContent="center" className="grad">
+        <BH3 style={style.heading}>Trending</BH3>
+        <Form.CustomSelect lg mb="3">
+          <option selected>Open this select menu</option>
+          <option value="1">One</option>
+          <option value="2">Two</option>
+          <option value="3">Three</option>
+        </Form.CustomSelect>
+        </Nav>
+      
+      )
+    }
 
-class App extends Component {
+// This is the Nav Above the Components Allowing Filter Options
+class ComponentLanding extends Component {
+ 
+    
+ 
   render() {
+    const style = {
+ 
+      marginBottom:'0', 
+      heading: {
+        fontWeight: '800',
+        textShadow: "0 0 3px blue, 0 0 5px white",
+        color: 'blue',
+  
+      }
+      
+    }
     return (
       <React.Fragment>
-        <AlbumHeader />
+        <MenuBtn />
         <main role="main">
-          <AlbumJumbotron />
-          <BDiv py="5" bg="light">
-            <Container>
+          <HeaderComp />
+          
+          <BDiv py="4" className="page">
+        
+            <Container center>
+              
+            <Alert white m="3" pl="2" className="page grad" border="white" align="center">  
+
+            <nav aria-label="Page navigation example" >
+              <Pagination justifyContent="center" bg="dark" p="1">
+              <Pagination.ItemLink href="#" style={style.heading} >
+                  <BSpan aria-hidden="true" ><FaChevronCircleLeft/></BSpan>
+                  <BSpan srOnly>Previous</BSpan>
+                </Pagination.ItemLink>
+                <Pagination.ItemLink href="#" style={style.heading} >1</Pagination.ItemLink>
+                <Pagination.ItemLink href="#" style={style.heading} >2</Pagination.ItemLink>
+                <Pagination.ItemLink href="#" style={style.heading} >3</Pagination.ItemLink>
+                <Pagination.ItemLink href="#" style={style.heading} >
+                  <BSpan aria-hidden="true"><FaChevronCircleRight/></BSpan>
+                  <BSpan srOnly>Next</BSpan>
+                </Pagination.ItemLink>
+              </Pagination>
+
+            <Form inline justifyContent="center" my="2 lg-0">
+              <BH3 pull="left" style={style.heading} > Now Trending </BH3>
+            
+            </Form>
+            </nav>
+
+            </Alert>
+         
+     
+        
               <Row>
                 <AlbumCard />
                 <AlbumCard />
@@ -133,23 +224,10 @@ class App extends Component {
             </Container>
           </BDiv>
         </main>
-        <AlbumFooter />
+     
       </React.Fragment>
     );
   }
 }
 
-export default App;
-// This will be the first argument in connect, see below
-// You can name this whatever you want but for simplicity it is named for what it does
-const mapStateToProps = state => {
-  // return an object of the variables needed from redux for this component
-  return {
-    fetchingComponents: state.componentsReducer.fetchingComponents,
-    fetchedComponents: state.componentsReducer.fetchedComponents,
-    components: state.componentsReducer.components
-  }
-}
-// export connect, it will be split like below
-// The first part will have mapStateToProps and either mapDispatchToProps or an object with all actions/methods needed
-export default connect(mapStateToProps, { FETCHING_COMPONENTS, FETCHED_COMPONENTS, ERROR })(ComponentsView);
+export default ComponentLanding;
