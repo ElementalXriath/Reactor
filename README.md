@@ -2,7 +2,7 @@
 <img src="./logo.jpg"/>
 
 <br />
-Reactor will be a script hub, social point, recruiting site, and Developer Tool dedicated <b>STRICTLY TO REACT JS.<b> 
+Reactor will be a script hub, social point, recruiting site, and Developer Tool dedicated <b>STRICTLY TO REACT JS.</b> 
   
  Simliar to Code Pens concept, but for 100% React . And you have a UI built to store and deploy all the componenets you want to add to a profile deck that will be used for your perosnal React Liabery accessed via NMP global , or a new concept we have came up with... a PERSONAL NMP AND KEY. As this app evolves this readme will become more dynamic. This is a rough over view , and as we all know the best ideas dont come until later on.
 
