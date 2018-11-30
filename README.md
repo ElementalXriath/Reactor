@@ -1,6 +1,6 @@
 Reactor
 
-Reactor will be a script hub dedicated STRICTLY TO REACT JS.
+Reactor will be a script hub dedicated STRICTLY TO REACT JS Simliar to Code Pen but 100% React , Along with a NPM list for any type of Development . And you have a UI built to store and deploy all the componenets you want to add to a deck. As this app evolves this readme will become more dynamic. This is a rough over view , and as we all know the best ideas dont come until later on.
 
 Users may search , browse , sell, trade, post , use and create React Components, Views, Widgets, along with browse libraries of the most trending Npms.
 
