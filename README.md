@@ -45,7 +45,7 @@ Reactor will in the other hand allow more experienced devs to create exclusive s
 
 The Users will be given the option to create new components to add the browse-able library for all other devs to obtain access to . There components may be rated , shared , and added to other devs decks. Developers will be able to gain rating though there evolution in the reactor community. Top devs profiles that maintain high state of involvement  , and be granted the ability to be contacted by recruiters. Reactors admit will be sharing developers profiles in professional industry of recruiters and clients.
 
-<h1>A Social Platfrom for React Component Developmenmt</h1>
+<h1>A Social Platform for React Component Developmenmt</h1>
 
 Reactor is meant to isolate React Js and draw its developers into shared media source. This will in return give this new langue a cutting edge acceleration of tech advancement.
 
