@@ -6,7 +6,7 @@ export const FETCHING_COMPONENTS = "FETCHING_COMPONENTS";
 export const FETCHED_COMPONENTS = "FETCHED_COMPONENTS";
 export const COMPONENTS_ERROR = "COMPONENTS_ERROR";
 
-const getComponents = () => {
+export const getComponents = () => {
   // place axios get method to server
   return dispatch => {
     // This will let users know that the page is fetching components data
@@ -14,7 +14,7 @@ const getComponents = () => {
     dispatch({type: FETCHING_COMPONENTS});
 
     // Making a get call to the server to obtain components data
-    axios.get('/components')
+    axios.get('http://localhost:3333/components')
     // Then server will return a response and we use this to dispatch an action
     // We supply a payload that contains the data for all components
          .then(res => {

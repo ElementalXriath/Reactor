@@ -17,6 +17,7 @@ class App extends Component {
           <Route path='/' exact component={MainView} />
           <Route path='/views' exact component={ViewsView} />
           <Route path='/components' exact component={ComponentsView} />
+          <Route path='/register' exact component={RegisterView} />
       </div>
 
     );

@@ -4,6 +4,7 @@ import { Card, Button, CardImg, CardTitle, CardText, CardDeck,
     CardSubtitle, CardBody } from 'reactstrap';
 import Logo from './logo.jpg';
 import { FaExpand, FaUikit, FaAtom, FaGem  } from "react-icons/fa";
+import { Link } from 'react-router-dom';
 
 export default class MainView extends React.Component {
   render() {
@@ -12,33 +13,36 @@ export default class MainView extends React.Component {
 
     <Container className="text-center">
         <br />
-        <Row> 
+        <Row>
         <Col xs="12" sm="12" className="text-center">
             <h1>Reactor</h1>
-           <img src={Logo} className="img-thumbnail" /> 
-             
+           <img src={Logo} className="img-thumbnail" />
+
         </Col>
         </Row>
         <br />
-        <Row>       
+        <Row>
         <Col xs="6" sm="6">
         <Card body className="shadow-lg p-3 mb-5 bg-white rounded" >
         <CardTitle><FaUikit /></CardTitle>
           <CardTitle>Components</CardTitle>
           <CardText>Search Reactors Component Lib.</CardText>
-          <Button color="primary">Go</Button>
+        <Link to='/components'><Button color="primary" style={{width: '100%'}}>
+            Go
+          </Button>
+          </Link>
         </Card>
       </Col>
       <Col xs="6" sm="6">
-        <Card body className="shadow-lg p-3 mb-5 bg-white rounded">      
+        <Card body className="shadow-lg p-3 mb-5 bg-white rounded">
         <CardTitle><FaExpand /></CardTitle>
           <CardTitle>Views</CardTitle>
           <CardText>Serach Reactors Views Lib.</CardText>
-          <Button>Go</Button>
+          <Link to='/views'><Button style={{width: '100%'}}>Go</Button></Link>
         </Card>
       </Col>
         </Row>
-        <Row>       
+        <Row>
         <Col xs="6" sm="6">
         <Card body className="shadow-lg p-3 mb-5 bg-white rounded">
         <CardTitle><FaAtom /></CardTitle>
@@ -48,7 +52,7 @@ export default class MainView extends React.Component {
         </Card>
       </Col>
       <Col xs="6" sm="6">
-        <Card body className="shadow-lg p-3 mb-5 bg-white rounded">    
+        <Card body className="shadow-lg p-3 mb-5 bg-white rounded">
         <CardTitle><FaGem /></CardTitle>
           <CardTitle>Exclusive</CardTitle>
           <CardText>Serach Reactors X Lib.</CardText>
@@ -57,7 +61,7 @@ export default class MainView extends React.Component {
       </Col>
         </Row>
       </Container>
-     
+
 
         );
     }
