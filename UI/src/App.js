@@ -6,6 +6,7 @@ import MainHeader from './Components/Header/index';
 import MainView from './Views/Home/index';
 import ViewsView from './Views/ViewsView/index';
 import ComponentsView from './Views/ComponentsView/index';
+import RegisterView from './Views/RegisterView';
 import { Route } from 'react-router-dom';
 
 class App extends Component {
