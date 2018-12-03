@@ -1,16 +1,28 @@
-import { FETCHING_USER, FETCHED_USER, USER_ERROR } from '../Actions/loginAction';
+import { CREATING_USER, CREATED_USER, USER_ERROR } from '../Actions/loginAction';
 
 const initialState = {
-  fetchingUser: false,
-  fetchedUser: false
+  creatingUser: false,
+  createdUser: false,
+  user_login_error: false,
+  error: null
 }
 
 const loginReducer = (state = initialState, action) => {
   switch (action.type) {
 
-    case FETCHING_USER:
+    case CREATING_USER:
       return Object.assign({}, state, {
-        fetchingUser: true
+        creatingUser: true
+      })
+    case CREATED_USER:
+      return Object.assign({}, state, {
+        creatingUser: false,
+        createdUser: true
+      })
+    case USER_ERROR:
+      return Object.assign({}, state, {
+        user_login_error: true,
+        error: action.payload
       })
     default:
       return state

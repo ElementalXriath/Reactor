@@ -27,7 +27,7 @@ export default class MainView extends React.Component {
         <CardTitle><FaUikit /></CardTitle>
           <CardTitle>Components</CardTitle>
           <CardText>Search Reactors Component Lib.</CardText>
-        <Link to='/components' style={{}}><Button color="primary" style={{width: '100%'}}>
+        <Link to='/components'><Button color="primary" style={{width: '100%'}}>
             Go
           </Button>
           </Link>
@@ -38,7 +38,7 @@ export default class MainView extends React.Component {
         <CardTitle><FaExpand /></CardTitle>
           <CardTitle>Views</CardTitle>
           <CardText>Serach Reactors Views Lib.</CardText>
-          <Button>Go</Button>
+          <Link to='/views'><Button style={{width: '100%'}}>Go</Button></Link>
         </Card>
       </Col>
         </Row>

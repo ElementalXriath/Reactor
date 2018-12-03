@@ -1,17 +1,17 @@
 import axios from 'axios';
 
-export const FETCHING_USER = 'FETCHING_USER';
-export const FETCHED_USER = 'FETCHED_USER';
+export const CREATING_USER = 'CREATING_USER';
+export const CREATED_USER = 'CREATED_USER';
 export const USER_ERROR = 'USER_ERROR';
 
 export const validateUser = (userObj) => {
   return dispatch => {
-    dispatch({type: FETCHING_USER})
+    dispatch({type: CREATING_USER})
 
-    axios.post('http://localhost:3333/users', {userObj})
+    axios.post('http://localhost:3333/users', {...userObj})
          .then(res => {
            dispatch({
-             type: FETCHED_USER,
+             type: CREATED_USER,
              payload: res.data
            })
          })

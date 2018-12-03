@@ -97,11 +97,17 @@ server.get('/users/:user', (req, res) => {
 });
 
 server.post('/users', (req, res) => {
-  const user = { id: getNextId(), ...req.body };
+  const {name, email, username, password} = req.body;
 
-  users = [...users, user];
-
-  res.send(users);
+  const user = {
+    id: getNextId(),
+    name: name,
+    email: email,
+    username: username,
+    password: password
+  }
+  
+  res.json(user);
 });
 
 server.put('/users/:id', (req, res) => {
@@ -154,4 +160,4 @@ server.get('/components/:id', (req, res) => {
 
 server.listen(port, () => {
   console.log('Running on PORT:3333');
-})
+});

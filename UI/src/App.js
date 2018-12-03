@@ -6,6 +6,7 @@ import MainHeader from './Components/Header';
 import MainView from './Views/main_view';
 import ViewsView from './Views/ViewsView';
 import ComponentsView from './Views/ComponentsView';
+import RegisterView from './Views/RegisterView';
 import { Route } from 'react-router-dom';
 
 class App extends Component {
@@ -17,6 +18,7 @@ class App extends Component {
           <Route path='/' exact component={MainView} />
           <Route path='/views' exact component={ViewsView} />
           <Route path='/components' exact component={ComponentsView} />
+          <Route path='/register' exact component={RegisterView} />
       </div>
 
     );

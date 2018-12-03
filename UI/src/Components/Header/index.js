@@ -62,14 +62,16 @@ class Example extends React.Component {
           <Collapse isOpen={!this.state.collapsed} navbar>
             <Nav navbar className="text-white" >
               <NavItem>
-                <NavLINK to='/Components'>
+                <NavLINK to='/components'>
                   <NavLink className="text-white">
                     <FaUikit /> Components
                   </NavLink>
                 </NavLINK>
               </NavItem>
               <NavItem>
-                <NavLink className="text-white" href="/components/"><FaExpand/> Views</NavLink>
+                <NavLINK to='/views'>
+                  <NavLink className="text-white"><FaExpand/> Views</NavLink>
+                </NavLINK>
               </NavItem>
               <NavItem>
                 <NavLink className="text-white" href="/components/"><FaAtom/> Widgets</NavLink>
@@ -83,6 +85,12 @@ class Example extends React.Component {
               <NavItem>
                 <NavLink className="text-white" href="https://github.com/ElementalXriath/Reactor"><FaGithub /> GitHub </NavLink>
               </NavItem>
+              <NavLINK to='/register'>
+                <NavLink className="text-white">
+                  {/* add icon for register and state to remove link when logged in*/}
+                   ~~Register
+                </NavLink>
+              </NavLINK>
             </Nav>
           </Collapse>
         </Navbar>
