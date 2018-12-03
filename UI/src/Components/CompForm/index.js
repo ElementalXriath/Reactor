@@ -1,4 +1,9 @@
 import React from 'react';
+
+
+//////  Will be taking these forms to a yard sell and trading them for a first editon lion king bowling bowl, championships are next tues
+and im going to the gold! .... really tho. Im using these just a easy to view list of forms ill be merging back into the final compnents 
+entry form that will be a custom code editor.
 import PropTypes from 'prop-types';
 import { withStyles } from '@material-ui/core/styles';
 import TextField from '@material-ui/core/TextField';
@@ -142,7 +147,7 @@ class OutlinedTextFields extends React.Component {
       <br />
         <form className={classes.container} noValidate autoComplete="off">
         <Grid container spacing={24}>
-        
+        //Author . This will be auto filled by USER INFO
         <Grid item xs={6} lg={3}>
           <Paper className={classes.paper}> 
           <TextField
@@ -158,7 +163,7 @@ class OutlinedTextFields extends React.Component {
         />
         </Paper>
         </Grid>
-        
+        // Title of Comp
         <Grid item xs={6} lg={3}>
           <Paper className={classes.paper}>
           <TextField
@@ -212,6 +217,7 @@ class OutlinedTextFields extends React.Component {
 
      
         <Grid item lg={4} xs={12}>
+          //This will be the JS form
           <Paper className={classes.paper}>
           <TextField
           id="JS"
@@ -240,7 +246,7 @@ class OutlinedTextFields extends React.Component {
    
           </Paper>
         </Grid>
-
+//Css Entry Form
         <Grid item xs={12} lg={4}>
           <Paper className={classes.paper}>
           <TextField
@@ -269,7 +275,7 @@ class OutlinedTextFields extends React.Component {
         />
           </Paper>
         </Grid>
-
+//Dexcription of Comp
         <Grid item xs={12} lg={4}>
           <Paper className={classes.paper}>
           <TextField
@@ -302,7 +308,7 @@ class OutlinedTextFields extends React.Component {
 
         <Grid item xs={12}>
           <Paper className={classes.paper}>
-
+// List of Dependicies  VVVVVVVVV and all rhe below will be option selects of all differnt ones then and option to enter a new one
              <h1> NPMS REQUIRED </h1>
 
           <TextField
