@@ -20,7 +20,7 @@ class App extends Component {
           <Route path='/components' exact component={ComponentsView} />
           <Route path='/register' exact component={RegisterView} />
       </div>
-
+      
     );
   }
 }
