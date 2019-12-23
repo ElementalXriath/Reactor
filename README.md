@@ -1,4 +1,4 @@
-<h1>Reactor</h1>
+<h1>Reactor</h1> FIRST PROJECT EVER WITH REACT 
 <img src="./logo.jpg"/>
 
 <br />
